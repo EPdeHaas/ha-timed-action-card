@@ -1,0 +1,8 @@
+# Ignore Serious Build #
+########################
+.logs
+.vscode
+.serious-build
+build
+builds/1
+builds/*/debug

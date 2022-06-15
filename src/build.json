@@ -1,0 +1,28 @@
+{
+    "name": "Timed Action Card",
+    "description": "A hidden card that triggers an actions after a given timeout has elapsed.",
+    "version": [0,0,1],
+    "author": "Ernst de Haas",
+    "filename": "timed-action-card.js",
+    "profile": "debug",
+
+    "profiles": {
+        "debug": {
+            "label": "debug",
+            "deploy": true,
+            "deploy_path": "timed-action-card"
+        },
+        "publish": {
+            "label": "publish",
+            "publish": true,
+            "deploy": true,
+            "deploy_path": "timed-action-card"
+        }
+    },
+
+    "sources": [
+        "custom-card.js",
+        "hidden-card.js",
+        "timed-action-card.js"
+    ]
+}
