@@ -35,7 +35,9 @@ navigation_path: ./
 | name            | string |            | optional       | A name for the card. Is only shown in edit mode.
 | timeout         | number |            | 10             | The timeout in seconds.
 | action          | string |            | 'navigate'     | The type of action to run when the timeout has passed.
-|-----------------|--------|------------|----------------|------------
 | navigation_path | string | 'navigate' | 'default_view' | The path to navigate to.
+
+### When using 'action: navigate'
+
 |-----------------|--------|------------|----------------|------------
 | navigation_path | string | 'navigate' | 'default_view' | The path to navigate to.
