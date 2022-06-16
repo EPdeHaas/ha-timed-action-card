@@ -17,7 +17,7 @@ Comming soon
 
 At the moment the card doesn't have a visual configurator so you'll need to configure us using Yaml.
 
-### Example 1: Back Home
+### Example: Back Home
 
 This config will navigate back to the first tab on your dashboard after 5 seconds. 
 ```yaml
@@ -29,15 +29,21 @@ navigation_path: ./
 ```
 ### Options
 
-| Name            | Type   | For action | Default        | Description
-|-----------------|--------|------------|----------------|------------
-| type            | string |            | **Required**   | `custom:timed-action-card`
-| name            | string |            | optional       | A name for the card. Is only shown in edit mode.
-| timeout         | number |            | 10             | The timeout in seconds.
-| action          | string |            | 'navigate'     | The type of action to run when the timeout has passed.
-| navigation_path | string | 'navigate' | 'default_view' | The path to navigate to.
+| Name            | Type   | Default        | Use With Action | Description
+|-----------------|--------|----------------|-----------------|------------
+| type            | string | **Required**   | Any             | `custom:timed-action-card`
+| name            | string | optional       | Any             | A name for the card. Is only shown in edit mode.
+| timeout         | number | 10             | Any             | The timeout in seconds.
+| action          | string | 'navigate'     | Any             | The type of action to run when the timeout has passed.
+| navigation_path | string | 'default_view' | 'navigate'      | The path to navigate to.
+| service         | string | **Required**   | 'call-service'  | The service to call.
+| service_data    | string | **object**     | 'call-service'  | The data used by the service call.
+| target          | string | **object**     | 'call-service'  | The target, or a list of targets, for which to call the service.
 
-### When using 'action: navigate'
+### Supported Actions
+- navigate
+- call-service
 
-|-----------------|--------|------------|----------------|------------
-| navigation_path | string | 'navigate' | 'default_view' | The path to navigate to.
+### Note on Service-Call actions
+
+The service call option is only partialy implemented at the moment and therefore doesn't support all options. At the moment is only supports entity_id's as target. Some services might not work as intended.
